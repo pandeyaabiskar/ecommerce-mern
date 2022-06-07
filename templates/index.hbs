@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Doko Online Store</title>  
+    <link rel="stylesheet" href="public/css/index.css">
+  </head>
+  <body>
+    
+    {{>navbar}}
+  
+  <section class="products">
+    {{#each products}}
+        <div class="product-card">
+          <a href="api/products/{{id}}">     
+          <div class="product-image">
+        <img src="{{image}}">
+      </div>
+      <div class="product-info">
+        <h5>{{title}}</h5>
+        <h6>${{price}}</h6>
+      </div>
+    </div>
+    </a> 
+    {{/each}}
+  </section>
+</body>
+</html>
